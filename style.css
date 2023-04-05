@@ -2,8 +2,8 @@
 
 :root {
   --header-height: 3rem;
-  --first-color: #0b4fcc;
-  --first-color-alt: #1a0e88;
+  --first-color: #3c84ab ;
+  --first-color-alt: #caf0f8;
   --first-color-send: #8f3bde;
   --title-color: #161212;
   --text-color: #5b5757;
@@ -48,6 +48,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body.dark-theme {
   --first-color-send: #161212;
   --title-color: #f3f1f1;
@@ -70,7 +71,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: white;
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -417,7 +418,45 @@ img {
 .send__input::placeholder {
   font-family: var(--body-font);
 }
+.heading {
+  
+    margin-bottom: 4rem;
+    text-align: center;
+}
 
+details {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+details p {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    line-height: 1.5;
+}
+
+.faq {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+summary {
+    font-weight: 700;
+}
+summary:hover {
+    cursor: pointer;
+}
+
+details[open] summary {
+    color: rgb(39, 59, 187);
+}
+
+
+details[open] p {
+    background-color: #FFCCAB;
+    padding: 3rem;
+}
 .send__img {
   width: 280px;
   justify-self: center;
