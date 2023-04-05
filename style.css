@@ -425,24 +425,24 @@ img {
 }
 
 details {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
 }
 
 details p {
-    font-size: 1.8rem;
+    font-size: 1rem;
     margin-left: 2rem;
     line-height: 1.5;
 }
 
 .faq {
-    max-width: 80rem;
+    
     margin: 0 auto;
-    padding: 3rem;
+    padding: 1rem;
 }
 
 summary {
-    font-weight: 700;
+    font-size: smaller
 }
 summary:hover {
     cursor: pointer;
@@ -455,7 +455,7 @@ details[open] summary {
 
 details[open] p {
     background-color: #FFCCAB;
-    padding: 3rem;
+  
 }
 .send__img {
   width: 280px;
