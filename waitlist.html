@@ -1,97 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="icon" href="blue.jpg">
+<head>
+  <meta charset="UTF-8" />
 
-<iframe
-id="JotFormIFrame-230866490629567"
-title="Idolo Mart Waitlist"
-onload="window.parent.scrollTo(0,0)"
-allowtransparency="true"
-allowfullscreen="true"
-allow="geolocation; microphone; camera"
-src="https://form.jotform.com/230866490629567"
-frameborder="0"
-style="min-width:100%;max-width:100%;height:539px;border:none;"
-scrolling="no"
->
-</iframe>
-<script type="text/javascript">
-var ifr = document.getElementById("JotFormIFrame-230866490629567");
-if (ifr) {
-var src = ifr.src;
-var iframeParams = [];
-if (window.location.href && window.location.href.indexOf("?") > -1) {
-  iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-}
-if (src && src.indexOf("?") > -1) {
-  iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-  src = src.substr(0, src.indexOf("?"))
-}
-iframeParams.push("isIframeEmbed=1");
-ifr.src = src + "?" + iframeParams.join('&');
-}
-window.handleIFrameMessage = function(e) {
-if (typeof e.data === 'object') { return; }
-var args = e.data.split(":");
-if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-if (!iframe) { return; }
-switch (args[0]) {
-  case "scrollIntoView":
-    iframe.scrollIntoView();
-    break;
-  case "setHeight":
-    iframe.style.height = args[1] + "px";
-    if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
-      iframe.style.minHeight = args[1] + "px";
-    }
-    break;
-  case "collapseErrorPage":
-    if (iframe.clientHeight > window.innerHeight) {
-      iframe.style.height = window.innerHeight + "px";
-    }
-    break;
-  case "reloadPage":
-    window.location.reload();
-    break;
-  case "loadScript":
-    if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-    var src = args[1];
-    if (args.length > 3) {
-        src = args[1] + ':' + args[2];
-    }
-    var script = document.createElement('script');
-    script.src = src;
-    script.type = 'text/javascript';
-    document.body.appendChild(script);
-    break;
-  case "exitFullscreen":
-    if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-    else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-    else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-    else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-    else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-    break;
-}
-var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-  var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-  iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-}
-};
-window.isPermitted = function(originUrl, whitelisted_domains) {
-var url = document.createElement('a');
-url.href = originUrl;
-var hostname = url.hostname;
-var result = false;
-if( typeof hostname !== 'undefined' ) {
-  whitelisted_domains.forEach(function(element) {
-      if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-          result = true;
-      }
-  });
-  return result;
-}
-};
-if (window.addEventListener) {
-window.addEventListener("message", handleIFrameMessage, false);
-} else if (window.attachEvent) {
-window.attachEvent("onmessage", handleIFrameMessage);
-}
+  <title>Idolo Market - A place to buy tech products </title>
+</head>
+
+
+
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.40776" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.40776" type="text/javascript"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.newPaymentUI = true;
+
+   JotForm.setConditions([{"action":[{"id":"action_1680043120737","field":"13","visibility":"Require","isError":false}],"id":"1680043131188","index":"0","link":"Any","priority":"0","terms":[{"id":"term_1680043120737","field":"13","operator":"isEmpty","value":"","isError":false}],"type":"require"},{"action":[{"id":"action_1680043095178","field":"17","visibility":"Require","isError":false}],"id":"1680043111139","index":"1","link":"Any","priority":"1","terms":[{"id":"term_1680043095178","field":"17","operator":"isEmpty","value":"","isError":false}],"type":"require"},{"action":[{"id":"action_1680042899610","field":"12","visibility":"Require","isError":false}],"id":"1680042914826","index":"2","link":"Any","priority":"2","terms":[{"id":"term_1680042899610","field":"12","operator":"isEmpty","value":"","isError":false}],"type":"require"},{"action":[{"id":"action_1680042881097","field":"11","visibility":"Require","isError":false}],"id":"1680042894818","index":"3","link":"Any","priority":"3","terms":[{"id":"term_1680042881097","field":"11","operator":"isEmpty","value":"","isError":false}],"type":"require"},{"action":[{"id":"action_1680042807467","field":"5","visibility":"Require","isError":false}],"id":"1680042863431","index":"4","link":"Any","priority":"4","terms":[{"id":"term_1680042807467","field":"5","operator":"isEmpty","value":"","isError":false}],"type":"require"},{"action":[{"id":"action_1680042772690","field":"4","visibility":"Require","isError":false}],"id":"1680042802421","index":"5","link":"Any","priority":"5","terms":[{"id":"term_1680042772690","field":"4","operator":"notContains","value":"@","isError":false}],"type":"require"},{"action":[{"id":"action_1680042755747","field":"3","visibility":"Require","isError":false}],"id":"1680042766342","index":"6","link":"Any","priority":"6","terms":[{"id":"term_1680042732416","field":"3","operator":"isEmpty","value":"","isError":false}],"type":"require"}]);	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+      setTimeout(function() {
+          $('input_4').hint('ex: myname@example.com');
+       }, 20);
+if (window.JotForm && JotForm.accessible) $('input_13').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_17').setAttribute('tabindex',0);
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"Join Waitlist","type":"control_button"},{"name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},{"name":"email4","qid":"4","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"phoneNumber5","qid":"5","text":"Phone Number","type":"control_phone"},null,null,{"name":"clickTo","qid":"8","text":"Idolo Mart Waitlist","type":"control_head"},null,null,{"name":"willYou","qid":"11","text":"Will You Invite Others To Join Our Waitlist?","type":"control_radio"},{"name":"whatWould","qid":"12","text":"What would you be doing mostly on Idolomart*","type":"control_radio"},{"name":"companygrouporganization13","qid":"13","text":"Country","type":"control_textbox"},null,null,null,{"name":"anySpecial","qid":"17","text":"Any special Feature you will like to see?","type":"control_textarea"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"submitForm","qid":"2","text":"Join Waitlist","type":"control_button"},{"name":"fullName3","qid":"3","text":"Full Name","type":"control_fullname"},{"name":"email4","qid":"4","subLabel":"example@example.com","text":"E-mail","type":"control_email"},{"name":"phoneNumber5","qid":"5","text":"Phone Number","type":"control_phone"},null,null,{"name":"clickTo","qid":"8","text":"Idolo Mart Waitlist","type":"control_head"},null,null,{"name":"willYou","qid":"11","text":"Will You Invite Others To Join Our Waitlist?","type":"control_radio"},{"name":"whatWould","qid":"12","text":"What would you be doing mostly on Idolomart*","type":"control_radio"},{"name":"companygrouporganization13","qid":"13","text":"Country","type":"control_textbox"},null,null,null,{"name":"anySpecial","qid":"17","text":"Any special Feature you will like to see?","type":"control_textarea"}]);}, 20); 
 </script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.40776&themeRevisionID=63a2351435646363a50e3ee0"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.40776" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.40776" />
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px 36px 12px 36px px;
+      margin-bottom: 12px 36px 12px 36px px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+    }
+  
+    .form-all {
+      color: #2C3345;
+    }
+    .form-header-group .form-header {
+      color: #2C3345;
+    }
+    .form-header-group .form-subHeader {
+      color: #2C3345;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #2C3345;
+    }
+    .form-sub-label {
+      color: #464d5f;
+    }
+  
+    .supernova {
+      background-color: #ffffff;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #fff;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+    .form-all {
+      position: relative;
+    }
+    .form-all:before {
+      content: "";
+      background-image: url("https://www.jotform.com/uploads/gideonjones63/form_files/blue.642367884037e5.87433934.jpg");
+      display: inline-block;
+      height: 125.13966480446926px;
+      position: absolute;
+      background-size: 160px 125px;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .form-all {
+      margin-top: 145px !important;
+    }
+    .form-all:before {
+      top: -135px;
+      background-position: top center;
+      left: 0;
+    }
+           
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/.form-all {
+    box-shadow : none!important;
+}
+
+.form-header-group {
+    border-bottom : none;
+}
+
+.form-buttons-wrapper {
+    border-top : 0;
+}
+
+.form-submit-button:hover {
+    background : #38383B !Important;
+    color : white !important;
+}
+
+.form-submit-button {
+    background : #d5d3d1!Important;
+    font-family : "Poppins"!Important;
+    border-color : #38383B !important;
+    border-style : outset!important;
+    text-shadow : none !important;
+    color : #38383B!important;
+    letter-spacing : .5px;
+}
+
+    /* Injected CSS Code */
+</style>
+
+<form class="jotform-form" action="https://submit.jotform.com/submit/230866490629567" method="post" name="form_230866490629567" id="230866490629567" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="230866490629567" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_8" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httac htvam">
+            <h1 id="header_8" class="form-header" data-component="header">Idolo Mart Waitlist</h1>
+            <div id="subHeader_8" class="form-subHeader">Idolomart is a pre-owned tech marketplace</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_fullname" id="id_3"><label class="form-label form-label-top" id="label_3" for="first_3"> Full Name </label>
+        <div id="cid_3" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_fullName3[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_fullName3[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> E-mail </label>
+        <div id="cid_4" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_4" name="q4_email4" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_4 sublabel_input_4" /><label class="form-sub-label" for="input_4" id="sublabel_input_4" style="min-height:13px" aria-hidden="false">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5_area"> Phone Number </label>
+        <div id="cid_5" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode"><input type="tel" id="input_5_area" name="q5_phoneNumber5[area]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_5 tel-area-code" value="" data-component="areaCode" aria-labelledby="label_5 sublabel_5_area" /><span class="phone-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="input_5_area" id="sublabel_5_area" style="min-height:13px" aria-hidden="false">country Code</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone"><input type="tel" id="input_5_phone" name="q5_phoneNumber5[phone]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_5 tel-local" value="" data-component="phone" aria-labelledby="label_5 sublabel_5_phone" /><label class="form-sub-label" for="input_5_phone" id="sublabel_5_phone" style="min-height:13px" aria-hidden="false">Phone Number</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" for="input_11"> Will You Invite Others To Join Our Waitlist? </label>
+        <div id="cid_11" class="form-input-wide" data-layout="full">
+          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_11" data-component="radio"><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_11" class="form-radio" id="input_11_0" name="q11_willYou" value="Yes" /><label id="label_input_11_0" for="input_11_0">Yes</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_11" class="form-radio" id="input_11_1" name="q11_willYou" value="No" /><label id="label_input_11_1" for="input_11_1">No</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_12"><label class="form-label form-label-top" id="label_12" for="input_12"> What would you be doing mostly on Idolomart* </label>
+        <div id="cid_12" class="form-input-wide" data-layout="full">
+          <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_12" data-component="radio"><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio" id="input_12_0" name="q12_whatWould" value="I would love to buy pre-owned tech gadgets on IdolomartNo" /><label id="label_input_12_0" for="input_12_0">I would love to buy pre-owned tech gadgets on IdolomartNo</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio" id="input_12_1" name="q12_whatWould" value="I would love to sell my pre-owned gadgets on Idolomart" /><label id="label_input_12_1" for="input_12_1">I would love to sell my pre-owned gadgets on Idolomart</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio" id="input_12_2" name="q12_whatWould" value="I would love to swap /​ Trade in my pre-owned tech for upgrades" /><label id="label_input_12_2" for="input_12_2">I would love to swap /​ Trade in my pre-owned tech for upgrades</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_12" class="form-radio" id="input_12_3" name="q12_whatWould" value="I would love to be a vendor on Idolomart" /><label id="label_input_12_3" for="input_12_3">I would love to be a vendor on Idolomart</label></span><span class="form-radio-item formRadioOther"><input type="radio" class="form-radio-other form-radio" name="q12_whatWould" id="other_12" value="other" tabindex="0" aria-label="Other" /><label id="label_other_12" style="text-indent:0" for="other_12">Other</label><span id="other_12_input" class="other-input-container" style="display:none"><input type="text" class="form-radio-other-input form-textbox" name="q12_whatWould[other]" data-otherhint="Other" size="15" id="input_12" data-placeholder="Please type another option here" placeholder="Please type another option here" /></span></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="input_13"> Country </label>
+        <div id="cid_13" class="form-input-wide" data-layout="half"> <input type="text" id="input_13" name="q13_companygrouporganization13" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" placeholder=" " data-component="textbox" aria-labelledby="label_13" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> Any special Feature you will like to see? </label>
+        <div id="cid_17" class="form-input-wide" data-layout="full"> <textarea id="input_17" class="form-textarea" name="q17_anySpecial" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_17"></textarea> </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button form-submit-button-blue-400 submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Join Waitlist</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="230866490629567" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='230866490629567'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "230866490629567-230866490629567";
+    }
+  </script>
+  <div class="formFooter-heightMask"></div>
+  <div class="formFooter f6 branding21">
+    <div class="formFooter-wrapper formFooter-leftSide"><a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=230866490629567&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo2021/jotform-logo-white.svg" alt="Jotform Logo" style="height: 44px;"></a></div>
+    <div class="formFooter-wrapper formFooter-rightSide"><span class="formFooter-text">Now create your own Jotform - It's free!</span><a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=230866490629567&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own Jotform</a></div>
+  </div>
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.40776"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.40776"></script>
