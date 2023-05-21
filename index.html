@@ -281,9 +281,24 @@ whether you're a student, a gamer, a designer, or just a tech lover, you'll find
 
     <p class="footer__copy">&#169; 2023 Idolo Mart</p>
   </footer>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.debug.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
+<script>
+  window.va = function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+</script>
+<script>
+  window.va('beforeSend', (event) => {
+    if (event.url.includes('secret')) {
+      return null;
+    }
+    return event;
+  });
+</script>
 
 </html>
 <!-- partial -->
